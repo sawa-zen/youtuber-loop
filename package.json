@@ -1,5 +1,22 @@
 {
-  "name": "youtuber-loop",
-  "private": true,
-  "dependencies": {}
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "server": "node server.js",
+    "start": "webpack-dev-server --open"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.7",
+    "express": "^4.15.4",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.5",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-dev-server": "^2.7.1"
+  }
 }
