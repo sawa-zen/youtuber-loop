@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/AppBootstrap.js',
+  entry: './src/js/AppBootstrap.js',
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist'
@@ -11,7 +11,10 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Output Management'
+      hash: true,
+      filename: 'index.html',
+      template: './src/index.html',
+      inject: 'body',
     })
   ],
   output: {
