@@ -26,14 +26,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: [
-          {
-            loader: 'babel-loader',
-            query:{
-              presets: ['react', 'es2015']
-            }
-          }
-        ]
+        loader: 'babel-loader'
       }
     ]
   }
