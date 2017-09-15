@@ -1,0 +1,7 @@
+:local .App {
+  color: red;
+
+  h1 {
+    color: blue;
+  }
+}
