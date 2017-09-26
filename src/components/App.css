@@ -1,7 +1,9 @@
-:local .App {
-  color: red;
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 
-  h1 {
-    color: blue;
-  }
+.App {
+  font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI","Noto Sans Japanese","\30D2\30E9\30AE\30CE\89D2\30B4   ProN W3", Meiryo, sans-serif;
 }

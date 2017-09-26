@@ -2,12 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
+const localIdentName = '[path]__[name]__[local]__[hash:base64:5]';
+
 module.exports = {
-  entry: './src/AppBootstrap.js',
-  devtool: 'inline-source-map',
-  devServer: {
-    contentBase: './dist'
-  },
+  entry: './src/index.js',
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
@@ -26,15 +24,39 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        options: {
+          compact: false
+        }
       },
       {
         test: /\.css$/,
         use: [
           'style-loader',
-          { loader: 'css-loader', options: { importLoaders: 1 } },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName
+            }
+          },
           'postcss-loader'
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'url-loader'
+        ]
+      },
+      {
+        test: /\.glsl$/,
+        loader: 'webpack-glsl-loader'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       }
     ]
   }
