@@ -7,6 +7,7 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 
 import App from './components/App';
 import * as reducers from './reducers';
+import Search from './components/pages/search/Search';
 
 const reducer = combineReducers({
   ...reducers,
@@ -17,21 +18,18 @@ let store = createStore(reducer);
 
 const history = syncHistoryWithStore(browserHistory, store);
 
-let Foo = () => (
-  <div>
-    <button onClick={() => browserHistory.push('/bar')}>Go to /foo</button>
-  </div>
-);
 let Bar = () => (
-  <div>Bar</div>
+  <div>
+    <button onClick={() => browserHistory.goBack()}>Go to /</button>
+  </div>
 );
 
 render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-        <IndexRoute component={Foo}/>
-        <Route path="bar" component={Bar}/>
+        <IndexRoute component={Search}/>
+        <Route path="watch" component={Bar}/>
         <Redirect from='*' to='/' />
       </Route>
     </Router>
