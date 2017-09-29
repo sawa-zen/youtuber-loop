@@ -10,7 +10,7 @@ https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCn-hW0BVhJBuz
 
 const Header = () => (
   <div className={CSS.Header}>
-    <h1>YouTuber Loop</h1>
+    <h1>App</h1>
   </div>
 );
 export default Header;
