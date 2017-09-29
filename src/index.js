@@ -7,8 +7,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 
 import App from './components/App';
 import reducer from './reducers';
-import SearchPage from './components/pages/search/SearchPage';
-import WatchPage from './components/pages/watch/WatchPage';
+import Home from './components/home/Home';
 
 let store = createStore(reducer);
 
@@ -18,8 +17,7 @@ render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-        <IndexRoute component={SearchPage}/>
-        <Route path="watch" component={WatchPage}/>
+        <IndexRoute component={Home}/>
         <Redirect from='*' to='/' />
       </Route>
     </Router>
