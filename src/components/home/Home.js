@@ -1,10 +1,10 @@
 import React from 'react';
-import List from '../list/List';
+import SubscribeChannelList from '../../container/subscribeChannelList/SubscribeChannelList';
 
 const Home = () => (
   <div>
     <h1>Home</h1>
-    <List items={[{}]}/>
+    <SubscribeChannelList />
   </div>
 );
 export default Home;
