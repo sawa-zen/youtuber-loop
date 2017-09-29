@@ -1,12 +1,14 @@
 import { connect } from 'react-redux';
 import ChannelList from '../../components/channelList/ChannelList';
 
-const mapStateToProps = (state) => ({
-  channels: [{}, {}]
-});
+const mapStateToProps = (state) => {
+  return {
+    channels: state.subscribeChannels
+  };
+};
 
-const SubscribeChannelList = connect(
+const subscribeChannelList = connect(
   mapStateToProps
 )(ChannelList);
 
-export default SubscribeChannelList;
+export default subscribeChannelList;
