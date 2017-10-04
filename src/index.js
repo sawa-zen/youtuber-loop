@@ -7,7 +7,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 
 import App from './components/App';
 import reducer from './reducers';
-import Home from './components/home/Home';
+import Home from './container/home/Home';
 
 let store = createStore(reducer);
 
