@@ -1,0 +1,8 @@
+.ChannelListItem {
+  height: 80px;
+  padding: 16px;
+  box-sizing: border-box;
+  background: #FFF;
+  color: #8a8a8a;
+  display: flex;
+}
