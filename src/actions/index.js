@@ -1,4 +1,4 @@
-export const getSubscribeChannels = () => {
+export const fetchSubscribeChannels = () => {
   return {
     type: 'GET_SUBSCRIBE_CHANNELS',
     channels: [{}, {}, {}]
