@@ -1,7 +1,7 @@
 export const fetchSubscribeChannels = () => {
   return {
     type: 'GET_SUBSCRIBE_CHANNELS',
-    channels: [{}, {}, {}]
+    channels: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
   };
 };
 

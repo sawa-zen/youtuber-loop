@@ -5,4 +5,9 @@
   background: #FFF;
   color: #8a8a8a;
   display: flex;
+  cursor: pointer;
+
+  &:hover {
+    background: #BBDEFB;
+  }
 }

@@ -10,9 +10,10 @@ class SubscribeChannelList extends React.Component {
   }
 
   render() {
-    const { channels } = this.props;
+    const { channels, className } = this.props;
     return (
       <ChannelList
+        className={className}
         channels={channels} />
     );
   }

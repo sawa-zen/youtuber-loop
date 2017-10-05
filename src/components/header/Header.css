@@ -1,10 +1,12 @@
-$HEIGHT: 56px;
+$HEIGHT: 48px;
 
 .Header {
   height: $HEIGHT;
-  background: #E97171;
+  background: #f44336;
   color: #FFF;
   padding: 0 16px;
+  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+
 
   h1 {
     line-height: $HEIGHT;

@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import CSS from './Header.css';
 
 // AIzaSyAPNBm8mcwmLIi-QRXufVw7cXMCzJf_JJc
@@ -8,9 +9,9 @@ https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCn-hW0BVhJBuz
  **/
 
 
-const Header = () => (
-  <div className={CSS.Header}>
-    <h1>App</h1>
+const Header = ({ className }) => (
+  <div className={classNames(CSS.Header, className)}>
+    <h1>YouTuberLoop</h1>
   </div>
 );
 export default Header;

@@ -4,8 +4,10 @@ import Header from './header/Header';
 
 const App = ({ children }) => (
   <div className={CSS.App}>
-    <Header />
-    <div>
+    <Header className={CSS.AppHeader} />
+    <div className={CSS.AppBackground}>
+    </div>
+    <div className={CSS.AppContent}>
       {children}
     </div>
   </div>
