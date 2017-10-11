@@ -1,4 +1,4 @@
-.ChannelListItem {
+.wrapper {
   height: 80px;
   padding: 16px;
   box-sizing: border-box;
@@ -10,4 +10,13 @@
   &:hover {
     background: #BBDEFB;
   }
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+}
+
+.Name {
+  line-height: 48px;
 }
