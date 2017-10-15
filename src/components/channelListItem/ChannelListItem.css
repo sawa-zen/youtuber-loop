@@ -6,17 +6,23 @@
   color: #8a8a8a;
   display: flex;
   cursor: pointer;
+  border-bottom: 1px solid #EEE;
 
   &:hover {
     background: #BBDEFB;
+  }
+
+  &:last-child {
+    border-bottom: none;
   }
 }
 
 .icon {
   width: 48px;
   height: 48px;
+  margin-right: 16px;
 }
 
-.Name {
+.name {
   line-height: 48px;
 }
